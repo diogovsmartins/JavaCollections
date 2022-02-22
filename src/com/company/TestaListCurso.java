@@ -16,6 +16,6 @@ public class TestaListCurso {
 
         javaCollections.adiciona(new Aula("Segunda aula de lists",20));
         javaCollections.adiciona(new Aula("terceira aula de lists",30));
-        System.out.println(aulas);
+        System.out.println(javaCollections);
     }
 }
