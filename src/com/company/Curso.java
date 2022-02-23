@@ -1,14 +1,14 @@
 package com.company;
 
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
+import java.util.HashSet;
 
 public class Curso {
 
     private String nome;
     private String instrutor;
     private List<Aula> aulas=new LinkedList<>();
+    private HashSet<Aluno> alunosMatriculados=new HashSet<>();
 
     public Curso(String nome, String instrutor){
         this.nome=nome;
@@ -42,4 +42,20 @@ public class Curso {
                 ", tempo total do curso: "+
                 getTempoTotal()+" ]";
     }
+
+    public void matricula(Aluno aluno){
+        alunosMatriculados.add(aluno);
+    }
+
+    public Set<Aluno> getAlunosMatriculados(){
+        return Collections.unmodifiableSet(alunosMatriculados);
+    }
+
+    public boolean estaMatriculado(Aluno aluno){
+        return this.alunosMatriculados.contains(aluno);
+    }
+
+
+
+
 }

@@ -1,11 +1,10 @@
 package com.company;
 
-import java.util.HashSet;
 import java.util.Set;
 
-public class HashList {
+public class HashSet {
     public static void main(String[] args) {
-        Set<String> alunos=new HashSet();
+        Set<String> alunos=new java.util.HashSet();
 
         for (int i=0; i<10;i++){
             alunos.add("Aluno "+ i);
